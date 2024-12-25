@@ -21,6 +21,13 @@
                 "captcha": "#ctl00_ContentPlaceHolder1_imgValidateCode",
                 "input": "#ctl00_ContentPlaceHolder1_Field_ValidateCode",
                 "maxlength": "4"
+            },
+            {
+                "enable": true,
+                "url": "https://kham.com.tw/*",
+                "captcha": "#chk_pic",
+                "input": "#CHK",
+                "maxlength": "4"
             }
         ]
     },
