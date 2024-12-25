@@ -54,6 +54,18 @@
                 "js/common.js",
                 "js/ocr.js"
             ]
+        },
+        {
+            "matches": [
+                "https://afrts.forest.gov.tw/*"
+            ],
+            "run_at": "document_end",
+            "world": "ISOLATED",
+            "js": [
+                "jquery.min.js",
+                "js/common.js",
+                "js/tmp_2.js"
+            ]
         }
     ],
     "version": "1.0.7"

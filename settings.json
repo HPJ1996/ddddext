@@ -14,6 +14,13 @@
                 "captcha_renew": "",
                 "input": "",
                 "maxlength": "4"
+            },
+            {
+                "enable": true,
+                "url": "https://afrts.forest.gov.tw/OT01_1.aspx",
+                "captcha": "#ctl00_ContentPlaceHolder1_imgValidateCode",
+                "input": "#ctl00_ContentPlaceHolder1_Field_ValidateCode",
+                "maxlength": "4"
             }
         ]
     },
@@ -50,6 +57,13 @@
             "enable": true,
             "url": "",
             "script": "",
+            "run_at": "document_end",
+            "world": "ISOLATED"
+        },
+        {
+            "enable": true,
+            "url": "https://afrts.forest.gov.tw/*",
+            "script": "let currentUrl = window.location.href;\nconsole.log(currentUrl);\nif (currentUrl.includes('OT01_1')) {\n    console.log('OT01_1');\n    $(\"#ctl00_ContentPlaceHolder1_Field_SDate\").val(\"2024-12-26\");\n    $(\"#ctl00_ContentPlaceHolder1_Field_BranchLine_0\").val(\"1\");\n    setInterval(() => {\n        console.log('OT01_1 interval');\n        $('#ctl00_ContentPlaceHolder1_Field_StartStation').val('360');\n        $('#ctl00_ContentPlaceHolder1_Field_StopStation').val('378');\n        $('#ctl00_ContentPlaceHolder1_Field_StartStation').trigger('change');\n        $('#ctl00_ContentPlaceHolder1_Field_StopStation').trigger('change');\n        const ticket_amount = '2';\n        $(\"#ctl00_ContentPlaceHolder1_Field_AdultTicket\").val(ticket_amount);\n        $(\"#ctl00_ContentPlaceHolder1_Field_F_FullTicket\").val(ticket_amount);\n    }, 500);\n} else if (currentUrl.includes('OT01_2')) {\n    console.log('OT01_2');\n    $(\"#trOutbound00\").click();\n    // $(\"#ctl00_ContentPlaceHolder1_btnSave\").click();\n} else if (currentUrl.includes('OT01_3')) {\n    console.log('OT01_3');\n    $(\"#ctl00_ContentPlaceHolder1_Field_ID\").val(\"E125112695\");\n    $(\"#ctl00_ContentPlaceHolder1_Field_Phone\").val(\"0922285320\");\n    $(\"#ctl00_ContentPlaceHolder1_Field_Email\").val(\"hpj.1996@icloud.com\");\n    $(\"#ctl00_ContentPlaceHolder1_Field_ConfirmTerms\").click();\n    // $(\"#ctl00_ContentPlaceHolder1_btnSave\").click();\n}",
             "run_at": "document_end",
             "world": "ISOLATED"
         }
