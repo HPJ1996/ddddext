@@ -78,6 +78,18 @@
                 "js/common.js",
                 "js/tmp_3.js"
             ]
+        },
+        {
+            "matches": [
+                "https://shopee.tw/*"
+            ],
+            "run_at": "document_end",
+            "world": "ISOLATED",
+            "js": [
+                "jquery.min.js",
+                "js/common.js",
+                "js/tmp_4.js"
+            ]
         }
     ],
     "version": "1.0.7"
