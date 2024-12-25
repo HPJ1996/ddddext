@@ -44,6 +44,42 @@
             "url": "",
             "selector": "",
             "value": ""
+        },
+        {
+            "enable": true,
+            "url": "https://inline.app/*",
+            "selector": "#name",
+            "value": "\u6d2a\u90a6\u4ec1"
+        },
+        {
+            "enable": true,
+            "url": "https://inline.app/*",
+            "selector": "#familyName",
+            "value": "\u6d2a"
+        },
+        {
+            "enable": true,
+            "url": "https://inline.app/*",
+            "selector": "#givenName",
+            "value": "\u90a6\u4ec1"
+        },
+        {
+            "enable": true,
+            "url": "https://inline.app/*",
+            "selector": "#phone",
+            "value": "0922285320"
+        },
+        {
+            "enable": true,
+            "url": "https://inline.app/*",
+            "selector": "#email",
+            "value": "mh1996320@gmail.com"
+        },
+        {
+            "enable": true,
+            "url": "https://inline.app/*",
+            "selector": "#adult-picker",
+            "value": "2"
         }
     ],
     "autocheck": [
